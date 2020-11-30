@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlack"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="105dp"
+        android:background="@drawable/bg_me_top"/>
+
+    <include
+        android:id="@+id/titleRelative"
+        layout="@layout/layout_title" />
+
+
+    <View
+        android:id="@+id/view_auth"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/titleRelative"
+        android:background="@color/colorGray"
+        android:visibility="invisible" />
+
+
+    <TextView
+        android:id="@+id/tv_text5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleRelative"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="there will be have text"
+        android:textColor="@color/colorGray"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+
+    <com.classic.common.MultipleStatusView
+        android:id="@+id/msv_status"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/titleRelative"
+        android:layout_marginTop="30dp">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/text_face"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Please ensure that the light source is sufficient
+and face the camera."
+                android:textColor="#ACACAC"
+                android:textSize="14sp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_upload_face"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/text_face"
+                    android:layout_marginTop="20dp"
+                    android:padding="15dp">
+
+
+                    <RelativeLayout
+                        android:id="@+id/face_bg"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="15dp">
+
+                        <ImageView
+                            android:id="@+id/iv_image"
+                            android:layout_width="match_parent"
+                            android:layout_height="170dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="0dp"
+                            android:layout_marginRight="0dp"
+                            android:src="@drawable/pic_face" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_text1_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rl_upload_face"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginRight="30dp"
+                    android:paddingBottom="20dp"
+                    android:text="Intelligent data encryption technology is enabled
+to protect your privacy &amp; security."
+                    android:textColor="@color/color666"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+    </com.classic.common.MultipleStatusView>
+
+    <TextView
+        android:id="@+id/tv_sumbit"
+        style="@style/btn_style"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="50dp"
+        android:text="START" />
+
+</RelativeLayout>

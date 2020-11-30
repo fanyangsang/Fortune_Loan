@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f3f3f3"
+    android:orientation="vertical"
+    android:showDividers="middle">
+    <FrameLayout
+        android:id="@+id/fl_main"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+    <RadioGroup
+        android:id="@+id/rg_main"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/main_home"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:background="@color/colorTransparent"
+            android:button="@null"
+            android:drawableTop="@drawable/selector_main_home"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:text="Home"
+            android:textColor="@drawable/home_radio_checked"
+            android:textSize="12sp" />
+        <RadioButton
+            android:id="@+id/main_mine"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:background="@color/colorTransparent"
+            android:button="@null"
+            android:drawableTop="@drawable/selector_main_mine"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:text="Me"
+            android:textColor="@drawable/home_radio_checked"
+            android:textSize="12sp" />
+    </RadioGroup>
+
+
+</LinearLayout>

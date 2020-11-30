@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlack"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="105dp"
+        android:background="@drawable/bg_me_top"/>
+
+    <include
+        android:id="@+id/titleRelative"
+        layout="@layout/layout_title" />
+
+
+    <View
+        android:id="@+id/view_auth"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/titleRelative"
+        android:background="@color/colorGray"
+        android:visibility="invisible" />
+
+
+    <TextView
+        android:id="@+id/tv_text5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleRelative"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="there will be have text"
+        android:textColor="@color/colorGray"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+
+    <com.classic.common.MultipleStatusView
+        android:id="@+id/msv_status"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/titleRelative"
+        android:layout_marginTop="10dp">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_text_fill"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:text="Fill in your personal information is helpful for your loan request."
+                    android:textColor="#ACACAC"
+                    android:textSize="14sp" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_draw"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    android:layout_below="@+id/tv_text_fill"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@drawable/pic_add_money"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:id="@+id/tv_complete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Complete information, increase quota"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_may_quota"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_complete"
+                        android:layout_marginTop="5dp"
+                        android:text="₹ * * * *"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="26sp" />
+
+                    <TextView
+                        android:id="@+id/tv_draw_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/shape_white_5"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="8dp"
+                        android:paddingRight="15dp"
+                        android:paddingBottom="8dp"
+                        android:text="Draw Money"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="#4A63ED" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_below="@+id/rl_draw"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="40dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+                        
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/ic_add_money_1"/>
+                        <LinearLayout
+                            android:layout_width="150dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Face verification"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="14sp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#acacac"
+                                android:text="Face to the camera and follow the instruction."
+                                android:textSize="12sp"/>
+
+                        </LinearLayout>
+
+                        <Space
+                            android:layout_width="wrap_content"
+                            android:layout_height="1dp"
+                            android:layout_weight="1"/>
+
+                        <ImageView
+                            android:id="@+id/iv_face_button"
+                            android:layout_width="57dp"
+                            android:layout_height="32dp"
+                            android:visibility="visible"
+                            android:src="@drawable/ic_add_button"/>
+                        <TextView
+                            android:id="@+id/tv_face_button"
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:text="up to ₹1000"
+                            android:textColor="#EFC804"
+                            android:gravity="center"
+                            android:visibility="gone"
+                            android:textSize="14sp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="40dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/ic_add_money_2"/>
+                        <LinearLayout
+                            android:layout_width="150dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Basic authentication"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="14sp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#acacac"
+                                android:text="Fill your basic information to get more credit."
+                                android:textSize="12sp"/>
+
+                        </LinearLayout>
+
+                        <Space
+                            android:layout_width="wrap_content"
+                            android:layout_height="1dp"
+                            android:layout_weight="1"/>
+
+                        <ImageView
+                            android:id="@+id/iv_base_button"
+                            android:layout_width="57dp"
+                            android:layout_height="32dp"
+                            android:src="@drawable/ic_add_button"/>
+
+                        <TextView
+                            android:id="@+id/tv_basic_button"
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:text="up to ₹1000"
+                            android:textColor="#EFC804"
+                            android:gravity="center"
+                            android:visibility="gone"
+                            android:textSize="14sp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="40dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/ic_add_money_3"/>
+                        <LinearLayout
+                            android:layout_width="150dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Bank information"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="14sp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#acacac"
+                                android:text="Bind your bank card to get cash"
+                                android:textSize="12sp"/>
+
+                        </LinearLayout>
+
+                        <Space
+                            android:layout_width="wrap_content"
+                            android:layout_height="1dp"
+                            android:layout_weight="1"/>
+
+                        <ImageView
+                            android:id="@+id/iv_bank_button"
+                            android:layout_width="57dp"
+                            android:layout_height="32dp"
+                            android:src="@drawable/ic_add_button"/>
+                        <TextView
+                            android:id="@+id/tv_bank_button"
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:text="up to ₹1000"
+                            android:textColor="#EFC804"
+                            android:gravity="center"
+                            android:visibility="gone"
+                            android:textSize="14sp"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+    </com.classic.common.MultipleStatusView>
+
+</RelativeLayout>

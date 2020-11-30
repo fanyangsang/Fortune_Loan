@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--联动-->
+    <declare-styleable name="WheelView">
+        <attr name="itemVisibleNum" format="integer" />
+
+        <attr name="textColorOuter" format="color" />
+        <attr name="textSizeOuter" format="dimension" />
+        <attr name="textColorCenter" format="color" />
+        <attr name="textSizeCenter" format="dimension" />
+        <attr name="lineColor" format="color" />
+        <attr name="isLoop" format="boolean" />
+        <attr name="lineSpaceingDimens" format="dimension" />
+        <attr name="wheelGravity" format="enum">
+            <enum name="left" value="234" />
+            <enum name="center" value="354" />
+            <enum name="right" value="894" />
+        </attr>
+
+    </declare-styleable>
+
+    <style name="Dialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <style name="myDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+    <!--轮播图-->
+    <declare-styleable name="FlyBanner">
+        <attr name="points_visibility" format="boolean" />
+        <attr name="points_position" format="enum">
+            <enum name="CENTER" value="0" />
+            <enum name="LEFT" value="1" />
+            <enum name="RIGHT" value="2" />
+        </attr>
+        <attr name="points_container_background" format="reference|color" />
+    </declare-styleable>
+
+    <declare-styleable name="AdjustableHeaderLinearLayout">
+        <attr name="needDragOver" format="boolean" />
+        <attr name="stickSectionHeight" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="CircularProgressView">
+        <attr name="backWidth" format="dimension" />    <!--背景圆环宽度-->
+        <attr name="progWidth" format="dimension" />    <!--进度圆环宽度-->
+        <attr name="backColor" format="color" />        <!--背景圆环颜色-->
+        <attr name="progColor" format="color" />        <!--进度圆环颜色-->
+        <attr name="progStartColor" format="color" />   <!--进度圆环开始颜色-->
+        <attr name="progFirstColor" format="color" />   <!--进度圆环结束颜色-->
+        <attr name="progress" format="integer" />       <!--圆环进度-->
+        <attr name="progTextSize" format="dimension" /> <!--进度文字大小-->
+        <attr name="progTextColor" format="color" />    <!--进度文字颜色-->
+    </declare-styleable>
+
+    <!--<declare-styleable name="NumberProgressBar">-->
+    <!--<attr name="progress_current" format="integer" />-->
+    <!--<attr name="progress_max" format="integer" />-->
+
+    <!--<attr name="progress_unreached_color" format="color" />-->
+    <!--<attr name="progress_reached_color" format="color" />-->
+
+    <!--<attr name="progress_reached_bar_height" format="dimension" />-->
+    <!--<attr name="progress_unreached_bar_height" format="dimension" />-->
+
+    <!--<attr name="progress_text_size" format="dimension" />-->
+    <!--<attr name="progress_text_color" format="color" />-->
+
+    <!--<attr name="progress_text_offset" format="dimension" />-->
+
+    <!--<attr name="progress_text_visibility" format="enum">-->
+    <!--<enum name="visible" value="0" />-->
+    <!--<enum name="invisible" value="1" />-->
+    <!--</attr>-->
+    <!--</declare-styleable>-->
+
+</resources>
